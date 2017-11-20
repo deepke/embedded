@@ -1,0 +1,9 @@
+-I- Waiting ...
+-I- TCL platform : Windows NT
+-I- SAM-BA 2.9  on : windows
+-I- Retrieved arguments from command line :
+-I- argv 0 : \usb\ARM0
+-I- argv 1 : AT91SAM9G45-EK
+-I- argv 2 : at91sam9g45ekes_demo_linux_nandflash.tcl
+-E- Connection \usb\ARM0 not found
+-E- Connection list : COM3

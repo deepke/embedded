@@ -1,0 +1,20 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 9.00
+# Visual Studio 2005
+Project("{A9579C99-2FCB-404B-BD28-4858F56A8BA4}") = "AT91SAM9G45M10EK_DEMO", "AT91SAM9G45M10EK_DEMO\AT91SAM9G45M10EK_DEMO.pbxml", "{0128BC56-9079-4181-826C-38C35CCEAB8E}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		AT91SAM9G45M10EK ARMV4I Debug|Platform Builder (_TGTCPU) = AT91SAM9G45M10EK ARMV4I Debug|Platform Builder (_TGTCPU)
+		AT91SAM9G45M10EK ARMV4I Release|Platform Builder (_TGTCPU) = AT91SAM9G45M10EK ARMV4I Release|Platform Builder (_TGTCPU)
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{0128BC56-9079-4181-826C-38C35CCEAB8E}.AT91SAM9G45M10EK ARMV4I Debug|Platform Builder (_TGTCPU).ActiveCfg = AT91SAM9G45M10EK ARMV4I Debug|Platform Builder (_TGTCPU)
+		{0128BC56-9079-4181-826C-38C35CCEAB8E}.AT91SAM9G45M10EK ARMV4I Debug|Platform Builder (_TGTCPU).Build.0 = AT91SAM9G45M10EK ARMV4I Debug|Platform Builder (_TGTCPU)
+		{0128BC56-9079-4181-826C-38C35CCEAB8E}.AT91SAM9G45M10EK ARMV4I Release|Platform Builder (_TGTCPU).ActiveCfg = AT91SAM9G45M10EK ARMV4I Release|Platform Builder (_TGTCPU)
+		{0128BC56-9079-4181-826C-38C35CCEAB8E}.AT91SAM9G45M10EK ARMV4I Release|Platform Builder (_TGTCPU).Build.0 = AT91SAM9G45M10EK ARMV4I Release|Platform Builder (_TGTCPU)
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
