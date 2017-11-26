@@ -24,7 +24,7 @@ MAKE_PARAM_LIST += CROSS_COMPILE=$(TOOLS_DIR)/arm-2007q1/bin/arm-none-linux-gnue
 test:
 	echo $(SDK_DIR)
 
-.PHONY: bootstrap boot kernel fs boot dms clean kernel_clean
+.PHONY: bootstrap boot kernel fs boot dms clean kernel_clean menuconfig
 
 bootstrap:
 
@@ -38,6 +38,9 @@ boot:
 
 dms:
 	make -C $(DMS_DIR) all $(MAKE_PARAM_LIST)
+
+menuconfig:
+	make -C $(KERNEL_DIR)/$(KERNEL_VERSION) menuconfig
 
 kernel_clean:
 	make -C $(KERNEL_DIR)/$(KERNEL_VERSION) clean
