@@ -41,10 +41,13 @@ boot:
 	cp -f $(BOOT_DIR)/$(UBOOT_VERSION)/u-boot.bin $(OUT_DIR)
 
 kernel:
-	cp $(KERNEL_DIR)/$(KERNEL_VERSION)/arch/arm/configs/embest_EM-SAM9G45_4.3lcd_defconfig $(KERNEL_DIR)/$(KERNEL_VERSION)/.config
+	#cp $(KERNEL_DIR)/$(KERNEL_VERSION)/arch/arm/configs/embest_EM-SAM9G45_4.3lcd_defconfig $(KERNEL_DIR)/$(KERNEL_VERSION)/.config
 	make -C $(KERNEL_DIR)/$(KERNEL_VERSION) $(KERNEL_IMAGE) $(MAKE_PARAM_LIST)
 	cp -f $(KERNEL_DIR)/$(KERNEL_VERSION)/arch/arm/boot/$(KERNEL_IMAGE) $(OUT_DIR)
 #CP -f MKIMAGE_FILE
+
+kernel_cfg:
+	cp $(KERNEL_DIR)/$(KERNEL_VERSION)/arch/arm/configs/embest_EM-SAM9G45_4.3lcd_defconfig $(KERNEL_DIR)/$(KERNEL_VERSION)/.config
 
 fs:
 	echo "fs"
@@ -62,20 +65,20 @@ menuconfig: menuconfig_kernel
 	echo "menuconfig"
 
 menuconfig_kernel:
-	make -C $(KERNEL_DIR)/$(KERNEL_VERSION) menuconfig
+	make -C $(KERNEL_DIR)/$(KERNEL_VERSION) $(MAKE_PARAM_LIST)  menuconfig
 
 #*
 #*
-.PHONY: clean kernel_clean boot_clean
+.PHONY: clean clean_kernel clean_boot
 
-boot_clean:
+clean_boot:
 	make -C $(BOOT_DIR)/$(UBOOT_VERSION) distclean $(MAKE_PARAM_LIST)
 	make -C $(BOOT_DIR)/$(UBOOT_VERSION) clean $(MAKE_PARAM_LIST)
 
-kernel_clean:
+clean_kernel:
 	make -C $(KERNEL_DIR)/$(KERNEL_VERSION) clean
 
-clean:kernel_clean boot_clean
+clean:clean_kernel clean_boot
 	echo "clean success"
 
 
